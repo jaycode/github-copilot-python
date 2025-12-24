@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="/static/styles.css">
+<head>
+  <meta charset="utf-8">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"></button>
+  <h1>Sudoku</h1>
+  <div class="board-layout">
+    <div class="sidebar left-sidebar">
+      <div class="sidebar-group">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="new-game">New Game</button>
+      </div>
+    </div>
+    <div class="board-center">
+      <div id="sudoku-board"></div>
+      <div id="timer">Time: 0:00</div>
+      <div id="leaderboard-container">
+        <h2>Top 10 Fastest Times:</h2>
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Time</th>
+              <th>Level</th>
+              <th>Hints</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+          </tbody>
+        </table>
+      </div>
+      <div class="status">
+        <span id="message"></span>
+      </div>
+    </div>
+    <div class="sidebar right-sidebar">
+      <div class="sidebar-group">
+        <button id="check-solution">Check</button>
+        <button id="hint-button">Hint</button>
+      </div>
+    </div>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>
